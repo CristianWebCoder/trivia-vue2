@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 40rem;
+}
+input,
+select,
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  border: none;
+}
+input:focus,
+select:focus,
+button:focus {
+  border: none;
+  outline: none;
+}
+#app {
+  height: 100%;
+}
+#app .game {
+  height: 100%;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 10px;
+}
+.game .score {
+  position: absolute;
+  top: 20px;
+  right: 5%;
+}
+.game .score span {
+  font-weight: 700;
+  color: #797979;
+}
+.game .first_view {
+  display: flex;
+  flex-direction: column;
+}
+.game .first_view h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.game .first_view .custom_select select {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #a1a1a1;
+  border-radius: 8px;
+}
+.game .first_view .custom_select:not(:last-child) {
+  margin-bottom: 20px;
+}
+.game .first_view .custom_submit button {
+  margin: 0 auto;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 40px;
+  background: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+.game .first_view .custom_submit button:hover {
+  background: #383838;
+}
+.game .second_view .content {
+  display: flex;
+  flex-direction: column;
+}
+.game .second_view .content .number_and_progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  gap: 20px;
+  width: 100%;
+}
+.game .second_view .content .number_and_progress .bar_progress {
+  background: #ccc;
+  height: 8px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.game .second_view .content .number_and_progress .bar_progress .progress {
+  background: #000;
+  width: 30%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.game .second_view .content .category {
+  text-align: center;
+  font-weight: 500;
+  color: #646464;
+  margin-bottom: 10px;
+}
+.game .second_view .content .question {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.game .second_view .content .options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.game .second_view .content .options button {
+  border-radius: 50px;
+  padding: 5px 20px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  border: 1px solid #747474;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+.game .second_view .content .options button:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+.game .third_view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game .third_view img {
+  margin-bottom: 20px;
+  max-width: 100px;
+}
+.game .third_view h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.game .third_view .button_game {
+  margin: 0 auto 20px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 40px;
+  background: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+.game .third_view .button_game:hover {
+  background: #383838;
+}
+.game .third_view .button_view_questions {
+  margin: 0 auto 20px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 40px;
+  background: #eaeaea;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #000;
+}
+.game .third_view .button_view_questions:hover {
+  background: #969696;
+}
+.game .third_view .questions_and_answers {
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+.game .third_view .questions_and_answers thead tr th {
+  text-align: left;
+}
+.game .third_view .questions_and_answers th {
+  background-color: #f2f2f2;
+  padding: 10px 15px;
+  border-bottom: 2px solid #ddd;
+}
+.game .third_view .questions_and_answers td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+.game .third_view .questions_and_answers tr:hover {
+  background-color: #f5f5f5;
+}
+.game .third_view .questions_and_answers .questions,
+.game .third_view .questions_and_answers .answers {
+  width: 48%;
+}
+.game .third_view .questions_and_answers .correct_answer {
+  display: block;
+  padding: 5px 0;
+  font-weight: bold;
+}
+.game .third_view .questions_and_answers span {
+  margin-right: 10px;
+}
+@media screen and (max-width: 640px) {
+  .game .second_view .content .number_and_progress .bar_progress {
+    width: 300px;
+  }
+  .game .second_view .content .question {
+    font-size: 26px;
+  }
+  .game .second_view .content .options {
+    flex-direction: column;
+  }
+  .game .second_view .content .options button {
+    min-height: 40px;
+  }
+  .game .third_view h2 {
+    font-size: 30px;
+  }
+}
